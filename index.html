@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+</style>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+
+<body>
+
+    <canvas id="myChart">
+
+    </canvas>
+
+</body>
+
+<script>
+    let myChart = document.getElementById('myChart').getContext('2d')
+    let newChart = new Chart(myChart, {
+        type: 'bar',
+        data: {
+            labels: ["Murder", "Serious Hurt", "Rape", "Outrage of Modesty", "Rioting", "Robbery", "Housebreaking", "Theft Of Motor Vehicle", "Snatch Theft", "Cheating Related Offences"],
+            datasets: [{
+                label: 'Cases',
+                data: [8,445,348,1320,59,37,164,60,18,16523],
+                minBarLength: 20,
+                backgroundColor: [
+                            'rgba(143,150,225,0.6)',
+                            'rgba(79,202,246,0.6)',
+                            'rgba(255,241,150,0.6)',
+                            'rgba(252,165,120,0.6)',
+                            'rgba(227,113,96,0.6)',
+                            'rgba(66,87,101,0.6)',
+                            'rgba(92,200,199,0.6)',
+                            'rgba(251,237,165,0.6)',
+                            'rgba(250,109,128,0.6)',
+                            'rgba(222,235,36,0.6)',
+                        ],
+            }]
+        }
+    })
+</script>
+
+</html>
